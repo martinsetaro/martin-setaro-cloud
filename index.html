@@ -5,16 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorge Martín Setaro | Power Platform & Azure Data Engineer</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: #f4f4f4; line-height: 1.6; margin: 0; padding: 0; }
-        header { background: #b30000; color: white; padding: 2rem; text-align: center; border-bottom: 4px solid #800000; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: #f4f4f4; line-height: 1.6; margin: 0; padding: 0; scroll-behavior: smooth; }
+        
+        /* Navbar Fija */
+        nav { position: sticky; top: 0; background: #800000; padding: 0.5rem 0; z-index: 1000; border-bottom: 2px solid #b30000; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 1rem; font-weight: bold; font-size: 0.9rem; transition: color 0.3s; }
+        nav a:hover { color: #ffcc00; }
+
+        header { background: #b30000; color: white; padding: 3rem 2rem 2rem 2rem; text-align: center; }
         .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
         .card { background: #2d2d2d; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; border-left: 5px solid #b30000; }
         h1, h2, h3 { margin: 0; }
         .tech-tag { display: inline-block; background: #444; color: #fff; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; margin: 0.2rem 0.5rem 0.2rem 0; }
         .footer { text-align: center; font-size: 0.8rem; color: #888; margin-top: 3rem; padding-bottom: 2rem; }
+        
+        /* Ajuste para que el anclaje no quede tapado por la navbar */
+        section { scroll-margin-top: 60px; }
     </style>
 </head>
 <body>
+
+<nav>
+    <a href="#perfil">Perfil</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#certificaciones">Certificaciones</a>
+    <a href="#formacion">Formación</a>
+    <a href="#contacto">Contacto</a>
+</nav>
 
 <header>
     <h1>Jorge Martín Setaro</h1>
@@ -22,14 +39,14 @@
 </header>
 
 <div class="container">
-    <section>
+    <section id="perfil">
         <h2>Perfil Profesional</h2>
         <div class="card">
             <p>Especialista en el ecosistema Microsoft enfocado en el diseño de soluciones empresariales integradas. Experto en unir el desarrollo robusto en <strong>.NET</strong> con <strong>Ingeniería de Datos en Azure</strong> y automatización avanzada.</p>
         </div>
     </section>
 
-    <section>
+    <section id="experiencia">
         <h2>Experiencia Destacada</h2>
         <div class="card">
             <h3>Ingeniería de Datos - Banco Provincia</h3>
@@ -44,30 +61,21 @@
             <p>Soporte y evolución de arquitectura de <strong>Microservicios en .NET</strong> para plataformas de alta concurrencia. Optimización de código legado y mantenimiento de APIs REST bajo estándar Swagger.</p>
             <span class="tech-tag">.NET Core</span><span class="tech-tag">APIs REST</span><span class="tech-tag">Microservicios</span>
         </div>
-
-        <div class="card">
-            <h3>Liderazgo Técnico - Artiatec</h3>
-            <p>Responsable del ciclo de vida de desarrollo en proyectos para <strong>Visa y Genneia</strong>. Mentoría técnica en mejores prácticas de Power Automate y Dynamics 365.</p>
-            <span class="tech-tag">Dynamics 365</span><span class="tech-tag">Mentoría</span><span class="tech-tag">Power Automate</span>
-        </div>
     </section>
 
-    <section>
+    <section id="certificaciones">
         <h2>Credenciales Oficiales (Applied Skills)</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 1rem;">
-            
             <div class="card" style="flex: 1; min-width: 220px; text-align: center; border-left: none; border-top: 5px solid #b30000; display: flex; flex-direction: column; align-items: center;">
                 <img src="https://i.ibb.co/m54x4Mp0/credencial.png" alt="PL-7001" style="width: 120px; height: auto; margin-bottom: 1rem;">
                 <h3 style="font-size: 1.1rem;">PL-7001</h3>
                 <p style="font-size: 0.85rem; color: #bbb;">Canvas Apps with Power Apps</p>
             </div>
-
             <div class="card" style="flex: 1; min-width: 220px; text-align: center; border-left: none; border-top: 5px solid #b30000; display: flex; flex-direction: column; align-items: center;">
                 <img src="https://i.ibb.co/m54x4Mp0/credencial.png" alt="PL-7002" style="width: 120px; height: auto; margin-bottom: 1rem;">
                 <h3 style="font-size: 1.1rem;">PL-7002</h3>
                 <p style="font-size: 0.85rem; color: #bbb;">Automated Workflows</p>
             </div>
-
             <div class="card" style="flex: 1; min-width: 220px; text-align: center; border-left: none; border-top: 5px solid #b30000; display: flex; flex-direction: column; align-items: center;">
                 <img src="https://i.ibb.co/m54x4Mp0/credencial.png" alt="PL-7003" style="width: 120px; height: auto; margin-bottom: 1rem;">
                 <h3 style="font-size: 1.1rem;">PL-7003</h3>
@@ -75,17 +83,18 @@
             </div>
         </div>
     </section>
-    <section>
+
+    <section id="formacion">
         <h2>Formación en Progreso</h2>
         <div class="card" style="border-left: 5px solid #ffcc00;">
             <h3>Arquitectura e Ingeniería Cloud</h3>
             <p style="font-size: 0.9rem; color: #ccc;">Fundación Educativa Santísima Trinidad | Abr 2026 - Oct 2026</p>
-            <p>Especialización técnica enfocada en el diseño, implementación y gestión de infraestructuras complejas en la nube.</p>
+            <p>Especialización técnica enfocada en el diseño y gestión de infraestructuras en la nube.</p>
             <span class="tech-tag" style="background: #665200;">En curso</span>
         </div>
     </section>
 
-    <section>
+    <section id="contacto">
         <h2>Contacto</h2>
         <div class="card" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-around; text-align: center; border-left: none; border-bottom: 5px solid #b30000;">
             <div style="flex: 1; min-width: 150px;">
@@ -108,6 +117,8 @@
     Mendoza, Argentina | Jorge Martín Setaro © 2026
 </div>
 
+</body>
+</html>
 
 </body>
 </html>
